@@ -80,7 +80,7 @@ module.exports = (grunt) ->
         src: ['app/scripts/vendor/**/*.js', 'tmp/scripts-wrapped/**/*.js']
         dest: 'build/js/app.js'
       style:
-        src: 'tmp/style/**/*.css'
+        src: ['app/style/vendor/**/*.css', 'tmp/style/**/*.css']
         dest: 'build/css/app.css'
 
     connect:
