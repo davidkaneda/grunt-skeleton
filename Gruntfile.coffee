@@ -96,6 +96,11 @@ module.exports = (grunt) ->
           cwd: 'app/'
           src: '<%= files.assets %>'
           dest: 'build/'
+        ,
+          expand: true
+          cwd: 'app/images'
+          src: '**'
+          dest: 'build/img/'
         ]
 
 
