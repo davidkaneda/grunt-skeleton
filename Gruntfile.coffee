@@ -115,7 +115,7 @@ module.exports = (grunt) ->
     livereload:
       options:
         base: 'build'
-      files: ['build/*/*.**']
+      files: ['build/**']
 
     stylus:
       app:
