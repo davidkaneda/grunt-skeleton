@@ -140,6 +140,9 @@ module.exports = (grunt) ->
         tasks: ['stylus', 'concat:style']
         options:
           interrupt: yes
+      coffee:
+        files: ['app/**/*.coffee']
+        tasks: ['coffee', 'commonjs', 'concat:app']
       # hbs:
       #   files: ['app/templates/**/*.hbs']
       #   tasks: ['templates', 'build-tests']
