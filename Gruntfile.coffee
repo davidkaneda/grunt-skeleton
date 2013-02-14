@@ -57,7 +57,8 @@ module.exports = (grunt) ->
 
     # Command configuration (should not have to mess with)
     clean:
-      app: ['build', 'tmp']
+      app: 'build'
+      tmp: 'tmp'
 
     coffee:
       app:
