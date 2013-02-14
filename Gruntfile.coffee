@@ -124,10 +124,8 @@ module.exports = (grunt) ->
 
     mincss:
       app:
-        expand: yes
-        cwd: 'tmp/style'
-        src: ['vendor/**/*.css', '**/*.css']
-        dest: 'build/css/'
+        src: ['tmp/style/vendor/**/*.css', 'tmp/style/**/*.css']
+        dest: 'build/css/app.css'
 
     strip:
       tmp:
