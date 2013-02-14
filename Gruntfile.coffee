@@ -78,7 +78,7 @@ module.exports = (grunt) ->
       options:
         banner: '/*<%= banner %>*/\n'
       app:
-        src: ['app/scripts/vendor/**/*.js', 'tmp/scripts-wrapped/**/*.js']
+        src: ['tmp/scripts/vendor/**/*.js', 'tmp/scripts-wrapped/**/*.js']
         dest: 'build/js/app.js'
       style:
         src: ['app/style/vendor/**/*.css', 'tmp/style/**/*.css']
