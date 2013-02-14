@@ -126,15 +126,15 @@ module.exports = (grunt) ->
 
     stylus:
       app:
-        # options:
-        #   paths: ['app/style']
+        options:
+          paths: ['app/style']
+          import: ['nib']
+          compress: no
         expand: yes
         cwd: 'app/style'
         dest: 'tmp/style/'
-        src: '**/*.styl'
+        src: ['**/*.styl', '!**/_*.styl']
         ext: '.css'
-        # files:
-        #   'tmp/style/app.css': 'app/style/**/*.styl'
 
     watch:
       assets:
