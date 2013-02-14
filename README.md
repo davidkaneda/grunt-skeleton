@@ -8,6 +8,7 @@ It currently supports [CoffeeScript](http://coffeescript.org), [Stylus](http://l
 
 Some other clever defaults:
 * scripts/vendor and style/vendor are automatically combined with your CSS/JS
+* Stylus files that start with an underscore are not compiled to files
 
 Requirements
 ------------
@@ -28,14 +29,9 @@ npm install
 
 Available Commands
 ------------------
-**`grunt`** (default)
-Build and concatenate files, but don't minify anything.
-
-**`grunt minify`**
-Build and concatenate files, minified. Also strips all console.* messages from JavaScript.
-
-**`grunt server`**
-Run default `grunt` command, start a server at [localhost:8000](http://localhost:8000/), then watch for any changes and call LiveReload if there's an update. You'll need [a LiveReload browser extension](http://feedback.livereload.com/knowledgebase/articles/86242-how-do-i-install-and-use-the-browser-extensions-) installed and turned on. I *might* remove this extension dependency in the future by injecting it automatically with Connect.
+* **`grunt`** (default) — Build and concatenate files, but don't minify anything.
+* **`grunt minify`** — Build and concatenate files, minified. Also strips all console.* messages from JavaScript.
+* **`grunt server`** — Run default `grunt` command, start a server at [localhost:8000](http://localhost:8000/), then watch for any changes and call LiveReload if there's an update. You'll need [a LiveReload browser extension](http://feedback.livereload.com/knowledgebase/articles/86242-how-do-i-install-and-use-the-browser-extensions-) installed and turned on. I *might* remove this extension dependency in the future by injecting it automatically with Connect.
 
 Of course, you can view *all* the available commands by running:
 
