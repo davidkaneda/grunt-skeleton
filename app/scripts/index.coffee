@@ -1,2 +1,2 @@
 $ ->
-  alert 'hello world'
+  # Get this party started
