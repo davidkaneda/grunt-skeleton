@@ -6,6 +6,8 @@ What does it come with?
 -----------------------
 It currently supports [CoffeeScript](http://coffeescript.org), [Stylus](http://learnboost.github.com/stylus/) (with [Nib](http://visionmedia.github.com/nib/)), and automatic [CommonJS](http://www.commonjs.org)-style wrapping, so JS classes can be written like they would be in Node. Also, I really just dislike the [AMD syntax](http://requirejs.org/docs/whyamd.html).
 
+Lib-wise, it comes with jQuery, Modernizr, and Normalize.
+
 Some other clever defaults:
 * scripts/vendor and style/vendor are automatically combined with your CSS/JS
 * Stylus files that start with an underscore are not compiled to files
