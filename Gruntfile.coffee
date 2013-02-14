@@ -125,6 +125,12 @@ module.exports = (grunt) ->
         src: ['vendor/**/*.css', '**/*.css']
         dest: 'build/css/'
 
+    strip:
+      tmp:
+        src: 'tmp/**/*.js'
+        options:
+          inline: yes
+
     stylus:
       app:
         options:
@@ -174,7 +180,7 @@ module.exports = (grunt) ->
   grunt.loadNpmTasks 'grunt-livereload'
   # grunt.loadNpmTasks 'grunt-mocha'
   # grunt.loadNpmTasks 'grunt-modernizr'
-  # grunt.loadNpmTasks 'grunt-strip'
+  grunt.loadNpmTasks 'grunt-strip'
 
   grunt.registerTask 'scripts', ['coffee:app', 'commonjs:app', 'concat:app']
 
