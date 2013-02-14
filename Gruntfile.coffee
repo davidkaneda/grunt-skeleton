@@ -143,23 +143,6 @@ module.exports = (grunt) ->
       coffee:
         files: ['app/**/*.coffee']
         tasks: ['coffee', 'commonjs', 'concat:app']
-      # hbs:
-      #   files: ['app/templates/**/*.hbs']
-      #   tasks: ['templates', 'build-tests']
-      #   options:
-      #     interrupt: yes
-      # js:
-      #   files: ['app/scripts/**/*.coffee']
-      #   tasks: ['scripts', 'build-tests']
-      #   options:
-      #     interrupt: yes
-      # test:
-      #   files: ['test/unit/**/*.coffee']
-      #   tasks: ['build-tests']
-      #   options:
-      #     interrupt: yes
-
-
   # grunt.loadNpmTasks 'grunt-assets-revving'
   grunt.loadNpmTasks 'grunt-commonjs'
   # grunt.loadNpmTasks 'grunt-commonjs-handlebars'
