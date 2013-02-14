@@ -158,7 +158,7 @@ module.exports = (grunt) ->
     watch:
       assets:
         files: ['app/**/*', '!app/{scripts,style,templates,images}/**']
-        tasks: ['copy', 'livereload']
+        tasks: ['copy:app', 'livereload']
         options:
           interrupt: yes
       css:
@@ -169,9 +169,8 @@ module.exports = (grunt) ->
       coffee:
         files: ['app/**/*.coffee']
         tasks: ['coffee', 'commonjs', 'concat:app']
-  # grunt.loadNpmTasks 'grunt-assets-revving'
+
   grunt.loadNpmTasks 'grunt-commonjs'
-  # grunt.loadNpmTasks 'grunt-commonjs-handlebars'
   grunt.loadNpmTasks 'grunt-contrib-clean'
   grunt.loadNpmTasks 'grunt-contrib-coffee'
   grunt.loadNpmTasks 'grunt-contrib-concat'
@@ -182,12 +181,13 @@ module.exports = (grunt) ->
   grunt.loadNpmTasks 'grunt-contrib-uglify'
   grunt.loadNpmTasks 'grunt-contrib-watch'
   grunt.loadNpmTasks 'grunt-livereload'
-  # grunt.loadNpmTasks 'grunt-mocha'
-  # grunt.loadNpmTasks 'grunt-modernizr'
   grunt.loadNpmTasks 'grunt-strip'
 
-  grunt.registerTask 'scripts', ['coffee:app', 'commonjs:app', 'concat:app']
 
-  grunt.registerTask 'default', ['copy', 'coffee', 'commonjs', 'stylus', 'concat']
+  grunt.registerTask 'prep', ['clean:tmp', 'copy:prep', 'coffee', 'commonjs', 'stylus']
+
+  grunt.registerTask 'default', ['prep', 'clean:app', 'copy:app', 'concat']
+
+  grunt.registerTask 'minify', ['prep', 'clean:app', 'copy:app', 'uglify', 'strip', 'mincss']
 
   grunt.registerTask 'server', ['default', 'connect', 'livereload', 'watch']
