@@ -117,6 +117,13 @@ module.exports = (grunt) ->
         base: 'build'
       files: ['build/**']
 
+    mincss:
+      app:
+        expand: yes
+        cwd: 'tmp/style'
+        src: ['vendor/**/*.css', '**/*.css']
+        dest: 'build/css/'
+
     stylus:
       app:
         # options:
@@ -151,7 +158,7 @@ module.exports = (grunt) ->
   grunt.loadNpmTasks 'grunt-contrib-concat'
   grunt.loadNpmTasks 'grunt-contrib-connect'
   grunt.loadNpmTasks 'grunt-contrib-copy'
-  # grunt.loadNpmTasks 'grunt-contrib-mincss'
+  grunt.loadNpmTasks 'grunt-contrib-mincss'
   grunt.loadNpmTasks 'grunt-contrib-stylus'
   grunt.loadNpmTasks 'grunt-contrib-uglify'
   grunt.loadNpmTasks 'grunt-contrib-watch'
