@@ -103,7 +103,11 @@ module.exports = (grunt) ->
           src: '**'
           dest: 'build/img/'
         ]
-
+      prep:
+        expand: yes
+        cwd: 'app'
+        src: '{scripts,style}/vendor/**/*.{js,css}'
+        dest: 'tmp/'
 
     handlebars:
       app:
