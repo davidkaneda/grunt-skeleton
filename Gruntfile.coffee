@@ -137,6 +137,14 @@ module.exports = (grunt) ->
         src: ['**/*.styl', '!**/_*.styl']
         ext: '.css'
 
+    uglify:
+      app:
+        files: 
+          '<%= concat.app.dest %>': ['<%= concat.app.src %>']
+        options:
+          sourceMap: 'build/js/app.js.map'
+        # sourceMapIn: coffee src map?
+
     watch:
       assets:
         files: ['app/**/*', '!app/{scripts,style,templates,images}/**']
