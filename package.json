@@ -1,6 +1,6 @@
 {
-  "name": "imimtek-revamp",
-  "version": "0.0.0",
+  "name": "Grunt Skeleton",
+  "version": "0.0.1pre",
   "description": "",
   "scripts": {
     "test": ""
