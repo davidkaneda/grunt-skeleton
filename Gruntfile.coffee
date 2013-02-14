@@ -72,7 +72,7 @@ module.exports = (grunt) ->
       app:
         cwd: 'tmp/scripts'
         dest: 'tmp/scripts-wrapped/'
-        src: ['**/*.js']
+        src: ['**/*.js', '!vendor/**']
 
     concat:
       options:
